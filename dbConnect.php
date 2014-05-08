@@ -34,7 +34,7 @@ $db = mysql_select_db("notebook", $connection) or die("Could not connect to tabl
 
 function createTableStart() {
 
-    print "<table id='mytable' cellspacing='0' border='1px' summary='All topics list'>
+    print "<table id='mytable' cellspacing='0' summary='All topics list'>
                   <tr>
                    <th scope='col' width='400px'>Topic</th>
                    <th scope='col' width='200px'>Last Edit</th>
