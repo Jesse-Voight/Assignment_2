@@ -1,0 +1,21 @@
+body {
+	font: normal 11px auto "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #4f6b72;
+	background: #E6EAE9;
+}
+td {
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	background: #fff;
+	padding: 6px 6px 6px 6px;
+	color: #4f6b72;
+}
+td.alt {
+	background: #F5FAFA;
+	color: #797268;
+}
+th.normal {
+	border-left: 1px solid #C1DAD7;
+	border-top: 0;
+	font: bold 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+}

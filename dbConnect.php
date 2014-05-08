@@ -3,8 +3,7 @@
 #declare varriables
 $tableName = "notes";
 $databaseName = "notebook";
-#
-
+echo "<link href='style.css' rel='stylesheet' type='text/css' />";
 $connection = mysql_connect("localhost", "assignment2", "winning") or die("Database connection to MySql server could not be established");
 
 $status = mysql_select_db($databaseName, $connection);
@@ -38,7 +37,7 @@ function createTableStart() {
     print "<table id='mytable' cellspacing='0' border='1px' summary='All topics list'>
                   <tr>
                    <th scope='col' width='400px'>Topic</th>
-                   <th scope='col' width='140px'>Last Edit</th>
+                   <th scope='col' width='200px'>Last Edit</th>
                   </tr>
                ";
 }

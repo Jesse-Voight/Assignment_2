@@ -10,7 +10,7 @@ include('dbConnect.php');
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Assignment_2_Title</title>
+        <title>Assignment 2 Welcome Page</title>
     </head>
     <body>
         <h2>Notebook</h2>
@@ -20,15 +20,21 @@ include('dbConnect.php');
 
         $query = "SELECT * FROM notes ORDER BY topic";
         $result = mysql_query($query, $connection);
+        $oddRow = true;
         if (!$result) {
             print "no rows";
         } else {
             while ($row = mysql_fetch_array($result, MYSQLI_ASSOC)) {
                 echo "<tr>";
-                echo "<td>{$row['topic']}</td>";
+                echo "<td";
+                if($oddRow){echo " class='alt'";}
+                echo "><a href=editNote.php?noteID={$row['idNotes']} />{$row['topic']}</td>";
                 $formTime = convertUnixTime($row['dateEdited']);
-                echo "<td>{$formTime}</td>";
+                echo "<td";
+                if($oddRow){echo " class='alt'";}
+                echo ">{$formTime}</td>";
                 echo "</tr>";
+                if($oddRow == false){$oddRow=true;}else{$oddRow = false;}
             }
         }
         echo "</table>";
