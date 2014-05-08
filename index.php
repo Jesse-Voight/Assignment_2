@@ -4,10 +4,11 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
+<html>
 <?php
 include('dbConnect.php');
 ?>
-<html>
+
     <head>
         <meta charset="UTF-8">
         <title>Assignment 2 Welcome Page</title>
@@ -28,11 +29,17 @@ include('dbConnect.php');
                 echo "<tr>";
                 echo "<td";
                 if($oddRow){echo " class='alt'";}
-                echo "><a href=editNote.php?noteID={$row['idNotes']} />{$row['topic']}</td>";
+                echo ">{$row['topic']}</td>";
                 $formTime = convertUnixTime($row['dateEdited']);
                 echo "<td";
                 if($oddRow){echo " class='alt'";}
                 echo ">{$formTime}</td>";
+                echo "<td";
+                if($oddRow){echo " class='alt'";}
+                echo "><a href='editNote.php?noteID={$row['idNotes']}' >Edit</a></td>";
+                echo "<td";
+                if($oddRow){echo " class='alt'";}
+                echo "><a href='deleteNote.php?noteID={$row['idNotes']}' onclick='return confirm('Are you sure?');'>Delete</a></td>";
                 echo "</tr>";
                 if($oddRow == false){$oddRow=true;}else{$oddRow = false;}
             }

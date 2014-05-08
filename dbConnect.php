@@ -38,6 +38,8 @@ function createTableStart() {
                   <tr>
                    <th scope='col' width='400px'>Topic</th>
                    <th scope='col' width='200px'>Last Edit</th>
+                   <th scope='col' width='40px'></th>
+                   <th scope='col' width='40px'></th>
                   </tr>
                ";
 }
