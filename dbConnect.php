@@ -4,6 +4,7 @@
 $tableName = "notes";
 $databaseName = "notebook";
 echo "<link href='style.css' rel='stylesheet' type='text/css' />";
+
 $connection = mysql_connect("localhost", "assignment2", "winning") or die("Database connection to MySql server could not be established");
 
 $status = mysql_select_db($databaseName, $connection);
@@ -20,6 +21,7 @@ if (!$status) {
         }
     }
 }
+
 $connectTable = mysql_query("SHOW TABLES;");
 if (!$connectTable) {
     print mysql_error();
@@ -45,7 +47,6 @@ function createTableStart() {
 }
 
 function convertUnixTime($time) {
-    return gmdate("H:i:s Y-m-d ", $time);
+    return gmdate("H:i:s d-m-Y ", $time);
 }
-
 ?>
