@@ -36,10 +36,10 @@ function createTableStart() {
 
     print "<table id='mytable' cellspacing='0' summary='All topics list'>
                   <tr>
-                   <th scope='col' width='400px'>Topic</th>
-                   <th scope='col' width='200px'>Last Edit</th>
-                   <th scope='col' width='40px'></th>
-                   <th scope='col' width='40px'></th>
+                   <th scope='col' width='500px'>Topic</th>
+                   <th scope='col' width='170px'>Last Edit</th>
+                   <th scope='col' width='25px'></th>
+                   <th scope='col' width='30px'></th>
                   </tr>
                ";
 }
