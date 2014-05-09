@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 #declare varriables
 $tableName = "notes";
 $databaseName = "notebook";
@@ -45,7 +45,14 @@ function createTableStart() {
                   </tr>
                ";
 }
-
+function login($credentials,$moe){
+    if($credentials == "admin" and $moe = "ttty"){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}
 function convertUnixTime($time) {
     return gmdate("H:i:s d-m-Y ", $time);
 }

@@ -14,10 +14,14 @@ include('dbConnect.php');
         <title>Assignment 2 Welcome Page</title>
     </head>
     <body>
+    <frame src="login.php">
         <h2>Notebook</h2>
         <?php
-        session_start();
         createTableStart();
+        if(isset($_SESSION["password"])){
+            
+            print "WOOOOOOOOOOOOOOOOOOOOOO";
+        }
 
         $query = "SELECT * FROM notes ORDER BY topic";
         $result = mysql_query($query, $connection);
