@@ -8,7 +8,9 @@ echo "<link href='style.css' rel='stylesheet' type='text/css' />";
 $connection = mysql_connect("localhost", "assignment2", "winning") or die("Database connection to MySql server could not be established");
 
 $status = mysql_select_db($databaseName, $connection);
-
+if(!isset($_SESSION['pw'])){
+    header("Location:http://{$_SERVER["HTTP_HOST"]}/assignment_2/login.php");
+}
 if (!$status) {
     $createDB = mysql_query("CREATE DATABASE $databaseName", $connection);
     if ($createDB) {
@@ -55,5 +57,10 @@ function login($credentials,$moe){
 }
 function convertUnixTime($time) {
     return gmdate("H:i:s d-m-Y ", $time);
+}
+function logOutButton(){
+    print "<form action='login.php' method='post'>  
+        <input type='submit' name='Leave' value='Log Out'/></td></tr> 
+        </form>";
 }
 ?>

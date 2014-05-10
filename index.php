@@ -18,11 +18,7 @@ include('dbConnect.php');
         <h2>Notebook</h2>
         <?php
         createTableStart();
-        if(isset($_SESSION["password"])){
-            
-            print "WOOOOOOOOOOOOOOOOOOOOOO";
-        }
-
+        logOutButton();
         $query = "SELECT * FROM notes ORDER BY topic";
         $result = mysql_query($query, $connection);
         $oddRow = true;

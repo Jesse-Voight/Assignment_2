@@ -12,9 +12,9 @@ if(!$result){
 }
 else{
     print "Error: POST data lost during navigation <br/>";
-    print "<a href='/A2/assignment_2/index.php'>Back to Homepage</a>";
+    print "<a href='/assignment_2/index.php'>Back to Homepage</a>";
 }
-header("Location:http://{$_SERVER["HTTP_HOST"]}/A2/assignment_2/index.php");
+header("Location:http://{$_SERVER["HTTP_HOST"]}/assignment_2/index.php");
 ?>
 /* 
  * To change this license header, choose License Headers in Project Properties.
