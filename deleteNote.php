@@ -12,6 +12,9 @@ if(!$result){
 header("Location:http://{$_SERVER["HTTP_HOST"]}/index.php");
 }
 }
+else{
+    header("Location:http://{$_SERVER["HTTP_HOST"]}/login.php");
+}
 ?>
 
 
