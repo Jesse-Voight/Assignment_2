@@ -52,11 +52,7 @@ function login() {
         header("Location:http://{$_SERVER["HTTP_HOST"]}/login.php");
         return false;
     } else {
-        print '<script type="text/javascript">';
-        print 'alert("Please Log In")';
-        print '</script>';
         return true;
-        header("Location:http://{$_SERVER["HTTP_HOST"]}/index.php");
     }
 }
 

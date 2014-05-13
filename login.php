@@ -21,6 +21,7 @@ if (isset($_POST['Leave'])) {
     session_destroy();
     echo "<center><h1>Successfully logged out</h1></center>";
 }
+
 print "<form action='login.php' method='post'> 
         <table> 
         <tr><td>User:</td><td><input type='text' name='User' /></td></tr> 
@@ -28,6 +29,7 @@ print "<form action='login.php' method='post'>
         <tr><td colspan='2' align='center'><input type='submit' value='Log In'/></td></tr> 
         </table> 
         </form>";
+print "<center><a style='font-size: 26pt;' href='index.php'>Log In Without Credentials</a></center>";
 echo "</body></html>";
 /* 
  * To change this license header, choose License Headers in Project Properties.
