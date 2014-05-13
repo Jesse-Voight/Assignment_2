@@ -6,8 +6,8 @@ $tableName = "notes";
 $databaseName = "notebook";
 echo "<link href='style.css' rel='stylesheet' type='text/css' />";
 
-#$connection = mysql_connect("mysql-assignment2-352.jelastic.servint.net", "root", "ucvnoYOx9a") or die("Database connection to MySql server could not be established");
-$connection = mysql_connect("localhost", "assignment2", "winning") or die("Database connection to MySql server could not be established");
+$connection = mysql_connect("mysql-assignment2-352.jelastic.servint.net", "root", "ucvnoYOx9a") or die("Database connection to MySql server could not be established");
+#$connection = mysql_connect("localhost", "assignment2", "winning") or die("Database connection to MySql server could not be established");
 $status = mysql_select_db($databaseName, $connection);
 
 if (!$status) {
