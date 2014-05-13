@@ -9,6 +9,6 @@ if(!$result){
     print mysql_error($connection);
     die();
 }
-header("Location:http://{$_SERVER["HTTP_HOST"]}/assignment_2/index.php");
+header("Location:http://{$_SERVER["HTTP_HOST"]}/index.php");
 
 ?>

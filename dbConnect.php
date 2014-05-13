@@ -5,11 +5,11 @@ $tableName = "notes";
 $databaseName = "notebook";
 echo "<link href='style.css' rel='stylesheet' type='text/css' />";
 
-$connection = mysql_connect("localhost", "assignment2", "winning") or die("Database connection to MySql server could not be established");
+$connection = mysql_connect("localhost", "root", "ucvnoYOx9a") or die("Database connection to MySql server could not be established");
 
 $status = mysql_select_db($databaseName, $connection);
 if(!isset($_SESSION['pw'])){
-    header("Location:http://{$_SERVER["HTTP_HOST"]}/assignment_2/login.php");
+    header("Location:http://{$_SERVER["HTTP_HOST"]}/login.php");
 }
 if (!$status) {
     $createDB = mysql_query("CREATE DATABASE $databaseName", $connection);

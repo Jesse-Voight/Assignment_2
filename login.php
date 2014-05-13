@@ -10,7 +10,7 @@ if (isset($_POST['User']) and isset($_POST['Password'])) {
     $password = $_POST['Password'];
     if ($userName == "admin" and $password == "n013b0oK") {
         $_SESSION['pw'] = true;
-        header("Location:http://{$_SERVER["HTTP_HOST"]}/assignment_2/index.php");
+        header("Location:http://{$_SERVER["HTTP_HOST"]}/index.php");
     } else {
         print '<script type="text/javascript">'; 
         print 'alert("Incorrect Password")'; 
