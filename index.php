@@ -49,6 +49,7 @@ include('dbConnect.php');
         print "<form method='link' action='addNew.php'>
                <input type='submit' value='New Note'/>
                </form>";
+        print "<a href='status.html'>Status Page</a>";
         ?>
     </body>
 </html>
