@@ -29,7 +29,7 @@ include('dbConnect.php');
                 echo "<tr>";
                 echo "<td";
                 if($oddRow){echo " class='alt'";}
-                echo "><a href='showNote.php?noteID={$row['idNotes']}' >{$row['topic']}</a></td>";
+                echo "><a href='showNote.php?noteID={$row['idNotes']}' 1>{$row['topic']}</a></td>";
                 $formTime = convertUnixTime($row['dateEdited']);
                 echo "<td";
                 if($oddRow){echo " class='alt'";}

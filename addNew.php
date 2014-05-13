@@ -1,6 +1,7 @@
 <?php
 
 include('dbConnect.php');
+login();
 echo "<h2>Add note page</h2>";
 $query = "SELECT * FROM notes ORDER BY topic";
 $result = mysql_query($query);

@@ -1,15 +1,15 @@
 <?php
+
 session_start();
 #declare varriables
 $tableName = "notes";
 $databaseName = "notebook";
 echo "<link href='style.css' rel='stylesheet' type='text/css' />";
 
-$connection = mysql_connect("mysql-assignment2-352.jelastic.servint.net", "root", "ucvnoYOx9a") or die("Database connection to MySql server could not be established");
+#$connection = mysql_connect("mysql-assignment2-352.jelastic.servint.net", "root", "ucvnoYOx9a") or die("Database connection to MySql server could not be established");
+$connection = mysql_connect("localhost", "assignment2", "winning") or die("Database connection to MySql server could not be established");
 $status = mysql_select_db($databaseName, $connection);
-if(!isset($_SESSION['pw'])){
-    header("Location:http://{$_SERVER["HTTP_HOST"]}/login.php");
-}
+
 if (!$status) {
     $createDB = mysql_query("CREATE DATABASE $databaseName", $connection);
     if ($createDB) {
@@ -46,20 +46,26 @@ function createTableStart() {
                   </tr>
                ";
 }
-function login($credentials,$moe){
-    if($credentials == "admin" and $moe = "ttty"){
-        return 1;
-    }
-    else{
-        return 0;
+
+function login() {
+    if (!isset($_SESSION['pw'])) {
+        header("Location:http://{$_SERVER["HTTP_HOST"]}/login.php");
+    } else {
+        print '<script type="text/javascript">';
+        print 'alert("Please Log In")';
+        print '</script>';
+        header("Location:http://{$_SERVER["HTTP_HOST"]}/index.php");
     }
 }
+
 function convertUnixTime($time) {
     return gmdate("H:i:s d-m-Y ", $time);
 }
-function logOutButton(){
+
+function logOutButton() {
     print "<form action='login.php' method='post'>  
         <input type='submit' name='Leave' value='Log Out'/></td></tr> 
         </form>";
 }
+
 ?>
